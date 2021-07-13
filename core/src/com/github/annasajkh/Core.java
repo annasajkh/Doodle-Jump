@@ -13,26 +13,20 @@ import com.badlogic.gdx.utils.ScreenUtils;
 
 public class Core extends ApplicationAdapter
 {
-	
-
 	public static float gameScale = 0.35f;
-	
-	List<Platform> platforms;
-	
-	public static Player player;
-	SpriteBatch spriteBatch;
-	
+	public static Player player;	
 	public static Platform lastPlatform;
 	
+	SpriteBatch spriteBatch;
 	Sprite background;
 
+	List<Platform> platforms;
+	
 	@Override
 	public void create()
 	{
 		background = new Sprite(new Texture(Gdx.files.internal("Background.png")));
-		
 		Sprite playerSprite = new Sprite(new Texture(Gdx.files.internal("Doodler.png")));
-
 		Sprite platformSprite = new Sprite(new Texture(Gdx.files.internal("Platform.png")));
 		
 		spriteBatch = new SpriteBatch();
@@ -113,6 +107,6 @@ public class Core extends ApplicationAdapter
 	@Override
 	public void dispose()
 	{
-		
+		spriteBatch.dispose();
 	}
 }
