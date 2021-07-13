@@ -38,8 +38,8 @@ public class Core extends ApplicationAdapter
 		for(int i = 0; i < 30; i++)
 		{
 			Platform platform = new Platform(	MathUtils.random(Gdx.graphics.getWidth() -  platformSprite.getWidth() / 2),
-												MathUtils.random(Gdx.graphics.getHeight() + Gdx.graphics.getHeight() + 200),
-												platformSprite);
+								MathUtils.random(Gdx.graphics.getHeight() + Gdx.graphics.getHeight() + 200),
+								platformSprite);
 			
 			platforms.add(platform);
 			
